@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+    <h1>MIRA Results</h1>
+    <p>This is an example results page.</p>
+    <p>On this page, you will be able to select the results from different scanning runs.</p>
+    <p>Results will include images of different sections of the plane.</p>
+    <p>Here is an example image:</p>
+    <img src = {{url_for('static', filename='plane_example.jpg')}}/>
+</div>
+{% endblock %}

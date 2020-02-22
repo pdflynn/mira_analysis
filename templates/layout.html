@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <header>
+      <div>
+        <h1></h1>
+        <strong><nav>
+          <ul>
+            <li><a href="{{ url_for('mira_home') }}">Home</a></li>
+            <li><a href="{{ url_for('mira_results') }}">Results</a></li>
+            <li><a href="{{ url_for('mira_command') }}">Command & Control</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+  </body>
+</html>
