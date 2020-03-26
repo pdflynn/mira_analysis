@@ -16,3 +16,8 @@ def mira_command():
 @app.route('/results')
 def mira_results():
     return render_template('results.html')
+
+# Analysis Page
+@app.route('/analyze')
+def mira_analyze():
+    return render_template('analyze.html')

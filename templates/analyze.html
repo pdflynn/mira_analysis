@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="home">
+    <h1>Analyze</h1>
+    <p>This is the analysis page, where inspection work will actually be done.</p>
+    <p>Essentially, during an inspection procedure, you'll get an image of some section of the plane on this page.</p>
+    <p>Each image, which has been stitched together and run through a computer vision algoirthm, will have visual indicators of possible structural damage.</p>
+    <p>The user of this application will be able to "APPROVE" or "DENY" each section of the plane.</p>
+    <p>If a plane segment is denied, a reason will be provided, and further inspection can occur, or the plane can be grounded for repairs.</p>
+</div>
+<div class="home">
+    <h3>Section: Full Plane</h3>
+    <img src = {{url_for('static', filename='787_dreamliner.jpg')}} width="640"/>
+    <br>
+    <button type="button">DENY</button><button type="button">APPROVE</button> 
+</div>
+{% endblock %}
