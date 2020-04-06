@@ -1,7 +1,17 @@
 <html>
   <head>
+    <!-- TODO: This script & css should really be moved to its own separate js file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script>
+      $(document).ready( function () {
+      $('#inspection_table').DataTable();
+    } );
+    </script>
     <title>MIRA MyInspect</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
   </head>
   <body>
     <header>

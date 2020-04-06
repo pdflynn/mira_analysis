@@ -44,3 +44,13 @@ h3 {
   font-size: 20;
   font-family: "Helvetica", sans-serif;
 }
+th {
+  font-size: 16;
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+}
+td {
+  font-size: 12;
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+}

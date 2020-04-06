@@ -1,5 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 <div class="home">
     <h1>Analyze</h1>
     <p>This is the analysis page, where inspection work will actually be done.</p>
@@ -9,9 +10,31 @@
     <p>If a plane segment is denied, a reason will be provided, and further inspection can occur, or the plane can be grounded for repairs.</p>
 </div>
 <div class="home">
-    <h3>Section: Full Plane</h3>
-    <img src = {{url_for('static', filename='787_dreamliner.jpg')}} width="640"/>
-    <br>
-    <button type="button">DENY</button><button type="button">APPROVE</button> 
+    <h3>Open Inspections</h3>
+    <table id="inspection_table" class="cell-border compact stripe">
+        <thead>
+            <tr>
+                <th>Inspection ID</th>
+                <th>Date Created</th>
+                <th>Deadline</th>
+                <th>Aircraft ID</th>
+                <th>Imaging Time</th>
+                <th>Approval Status</th>
+                <th>AI Confidence</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>4/6/2020</td>
+                <td>4/6/2020 11:59 PM</td>
+                <td>747-AAL-32</td>
+                <td>4/6/2020 4:27 PM</td>
+                <td>PENDING</td>
+                <td>89%</td>
+            </tr>
+        </tbody>
+    </table>
+    
 </div>
 {% endblock %}
