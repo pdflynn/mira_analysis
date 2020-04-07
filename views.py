@@ -1,8 +1,10 @@
 from flask import Flask, render_template, url_for
-from models import app
+# from models import app
+
+app = Flask(__name__)
 
 # Home Page
-@app.route('/')
+@app.route('/',)
 def mira_home():
     return render_template('home.html')
 
