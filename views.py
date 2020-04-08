@@ -1,7 +1,9 @@
+# danny branch
 from flask import Flask, render_template, url_for
-# from models import app
-# Neil's branch, attempting commit
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mira_dev.db'
+
+db = SQLAlchemy(app)
 
 # Home Page
 @app.route('/',)
@@ -20,6 +22,9 @@ def mira_results():
     return render_template('results.html')
 
 # Analysis Page
-@app.route('/analyze')
+@app.route('/analyze', methods=['GET', 'POST'])
 def mira_analyze():
-    return render_template('analyze.html')
+    test_data = Inspection.query.all()
+    print(test_data)
+
+    return render_template('analyze.html', data=test_data)
