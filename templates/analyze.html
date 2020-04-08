@@ -24,42 +24,17 @@
             </tr>
         </thead>
         <tbody>
+            {% for row in data %}
             <tr>
-                <td>1</td>
-                <td>4/6/2020</td>
-                <td>4/6/2020 11:59 PM</td>
-                <td>747-AAL-32</td>
-                <td>4/6/2020 4:27 PM</td>
-                <td>PENDING</td>
-                <td>89%</td>
+                <td>{{ row.id }}</td>
+                <td>{{ row.date_created }}</td>
+                <td>{{ row.deadline }}</td>
+                <td>{{ row.aircraft_id }}</td>
+                <td>{{ row.imaging_time }}</td>
+                <td>{{ row.approval_status }}</td>
+                <td>{{ row.ai_confidence }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>4/6/2020</td>
-                <td>4/9/2020 11:59 PM</td>
-                <td>767-AAL-31</td>
-                <td>4/7/2020 4:27 PM</td>
-                <td>PENDING</td>
-                <td>91%</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>4/2/2020</td>
-                <td>4/6/2020 11:59 PM</td>
-                <td>A320-DAL-66</td>
-                <td>4/9/2020 4:27 PM</td>
-                <td>APPROVED</td>
-                <td>99%</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>4/12/2020</td>
-                <td>4/13/2020 11:59 PM</td>
-                <td>A380-SW-1</td>
-                <td>4/11/2020 3:27 PM</td>
-                <td>REJECTED</td>
-                <td>70%</td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
     
