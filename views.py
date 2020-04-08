@@ -21,10 +21,22 @@ def mira_command():
 def mira_results():
     return render_template('results.html')
 
+# Unique page per inspection
+@app.route('/results/inspection/<inspection_id>')
+def mira_inspection_result(inspection_id):
+    print(inspection_id)
+    inspections = Inspection.query.all()
+    inspection = "didn't update"
+    for ins in inspections:
+        if int(ins.get_id()) == int(inspection_id):
+            inspection = ins
+    print(inspection)
+
+    return render_template('inspection_result.html', inspection=inspection)
+
 # Analysis Page
 @app.route('/analyze', methods=['GET', 'POST'])
 def mira_analyze():
     test_data = Inspection.query.all()
-    print(test_data)
 
     return render_template('analyze.html', data=test_data)
