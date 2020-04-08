@@ -15,6 +15,7 @@
         <thead>
             <tr>
                 <th>Inspection ID</th>
+                <th>Link</th>
                 <th>Date Created</th>
                 <th>Deadline</th>
                 <th>Aircraft ID</th>
@@ -27,6 +28,7 @@
             {% for row in data %}
             <tr>
                 <td>{{ row.id }}</td>
+                <td><a href='{{ url_for("mira_inspection_result", inspection_id=row.id) }}'>View Inspection</a></td>
                 <td>{{ row.date_created }}</td>
                 <td>{{ row.deadline }}</td>
                 <td>{{ row.aircraft_id }}</td>
