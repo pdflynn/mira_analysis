@@ -1,7 +1,10 @@
-# danny branch
+# neil branch
 from flask import Flask, render_template, url_for
+from flask_sqlalchemy import SQLAlchemy
+from models import db, Inspection
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mira_dev.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
