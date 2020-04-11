@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\static",
-    "\\static\\css",
-    "\\static\\js",
     "\\templates"
   ],
-  "SelectedNode": "\\templates\\inspection_result.html",
+  "SelectedNode": "\\run.py",
   "PreviewInSolutionExplorer": false
 }
