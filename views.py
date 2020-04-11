@@ -27,13 +27,20 @@ def mira_results():
 # Unique page per inspection
 @app.route('/results/inspection/<inspection_id>')
 def mira_inspection_result(inspection_id):
-    print(inspection_id)
+    # Grabs all of the inspections from the Inspection table.
+    # Note: This is probably an inefficient way to do this and
+    # could be improved.
     inspections = Inspection.query.all()
-    inspection = "didn't update"
+
+    # Initialize "inspection" with a null pointer, and then once
+    # we find the inspection in the inspections table that matches
+    # the ID that was passed to this function, send it through to 
+    # the front end with render_template. From there, it can be 
+    # accessed via Jinja.
+    inspection = None
     for ins in inspections:
         if int(ins.get_id()) == int(inspection_id):
             inspection = ins
-    print(inspection)
 
     return render_template('inspection_result.html', inspection=inspection)
 

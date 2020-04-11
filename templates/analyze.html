@@ -33,7 +33,13 @@
                 <td>{{ row.deadline }}</td>
                 <td>{{ row.aircraft_id }}</td>
                 <td>{{ row.imaging_time }}</td>
-                <td>{{ row.approval_status }}</td>
+                {% if row.approval_status == 0 %}
+                <td>PENDING</td>
+                {% elif row.approval_status == 1 %}
+                <td>APPROVED</td>
+                {% elif row.approval_status == 2 %}
+                <td>DENIED</td>
+                {% endif %}
                 <td>{{ row.ai_confidence }}</td>
             </tr>
             {% endfor %}
