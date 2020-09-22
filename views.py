@@ -13,16 +13,6 @@ db = SQLAlchemy(app)
 def mira_home():
     return render_template('home.html')
 
-# Command & Control Page
-@app.route('/command')
-def mira_command():
-    return render_template('command.html')
-
-
-# Results Page
-@app.route('/results')
-def mira_results():
-    return render_template('results.html')
 
 # Unique page per inspection
 @app.route('/results/inspection/<inspection_id>')
