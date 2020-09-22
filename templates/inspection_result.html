@@ -28,101 +28,87 @@
             <i class="glyphicon glyphicon-chevron-right"></i>Fuselage
         </a>
         <div class="list-group collapse" id="item-1">
-
             <a href="#item-1-1" class="list-group-item" data-toggle="collapse">
                 <i class="glyphicon glyphicon-chevron-right"></i>Left Fuselage
             </a>
             <div class="list-group collapse" id="item-1-1">
-                <a href="#" class="list-group-item">Image LF.1</a>
-                <a href="#" class="list-group-item">Image LF.2</a>
-                <a href="#" class="list-group-item">Image LF.3</a>
+                {% for i in range(1, 5) %}
+                <a href="#img-lf-{{i}}" class="list-group-item" data-toggle="collapse">
+                    <i class="glyphicon glyphicon-chevron-right"></i>Image LF.{{ i }}
+                    <div class="list-group collapse" id="img-lf-{{i}}">
+                        <img src="/static/img/lf{{i}}.png">
+                    </div>
+                </a>
+                {% endfor %}
             </div>
 
             <a href="#item-1-2" class="list-group-item" data-toggle="collapse">
                 <i class="glyphicon glyphicon-chevron-right"></i>Right Fuselage
             </a>
             <div class="list-group collapse" id="item-1-2">
-                <a href="#" class="list-group-item">Item 1.2.1</a>
-                <a href="#" class="list-group-item">Item 1.2.2</a>
-                <a href="#" class="list-group-item">Item 1.2.3</a>
+                {% for i in range(9) %}
+                <a href="#" class="list-group-item">Image RF.{{ i }}</a>
+                {% endfor %}
             </div>
 
             <a href="#item-1-3" class="list-group-item" data-toggle="collapse">
                 <i class="glyphicon glyphicon-chevron-right"></i>Top Fuselage
             </a>
             <div class="list-group collapse" id="item-1-3">
-                <a href="#" class="list-group-item">Item 1.3.1</a>
-                <a href="#" class="list-group-item">Item 1.3.2</a>
-                <a href="#" class="list-group-item">Item 1.3.3</a>
+                {% for i in range(6) %}
+                <a href="#" class="list-group-item">Image TF.{{ i }}</a>
+                {% endfor %}
             </div>
 
         </div>
 
         <a href="#item-2" class="list-group-item" data-toggle="collapse">
-            <i class="glyphicon glyphicon-chevron-right"></i>Item 2
+            <i class="glyphicon glyphicon-chevron-right"></i>Left Wing
         </a>
         <div class="list-group collapse" id="item-2">
 
             <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 2.1
+                <i class="glyphicon glyphicon-chevron-right"></i>Top Left Wing
             </a>
             <div class="list-group collapse" id="item-2-1">
-                <a href="#" class="list-group-item">Item 2.1.1</a>
-                <a href="#" class="list-group-item">Item 2.1.2</a>
-                <a href="#" class="list-group-item">Item 2.1.3</a>
+                <a href="#" class="list-group-item">Image TLW.1</a>
+                <a href="#" class="list-group-item">Image TLW.2</a>
+                <a href="#" class="list-group-item">Image TLW.3</a>
             </div>
 
             <a href="#item-2-2" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 2.2
+                <i class="glyphicon glyphicon-chevron-right"></i>Bottom Left Wing
             </a>
             <div class="list-group collapse" id="item-2-2">
-                <a href="#" class="list-group-item">Item 2.2.1</a>
-                <a href="#" class="list-group-item">Item 2.2.2</a>
-                <a href="#" class="list-group-item">Item 2.2.3</a>
-            </div>
-
-            <a href="#item-2-3" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 2.3
-            </a>
-            <div class="list-group collapse" id="item-2-3">
-                <a href="#" class="list-group-item">Item 2.3.1</a>
-                <a href="#" class="list-group-item">Item 2.3.2</a>
-                <a href="#" class="list-group-item">Item 2.3.3</a>
+                <a href="#" class="list-group-item">Image BLW.1</a>
+                <a href="#" class="list-group-item">Image BLW.2</a>
+                <a href="#" class="list-group-item">Image BLW.3</a>
             </div>
 
         </div>
 
 
         <a href="#item-3" class="list-group-item" data-toggle="collapse">
-            <i class="glyphicon glyphicon-chevron-right"></i>Item 3
+            <i class="glyphicon glyphicon-chevron-right"></i>Right Wing
         </a>
         <div class="list-group collapse" id="item-3">
 
             <a href="#item-3-1" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 3.1
+                <i class="glyphicon glyphicon-chevron-right"></i>Top Right Wing
             </a>
             <div class="list-group collapse" id="item-3-1">
-                <a href="#" class="list-group-item">Item 3.1.1</a>
-                <a href="#" class="list-group-item">Item 3.1.2</a>
-                <a href="#" class="list-group-item">Item 3.1.3</a>
+                <a href="#" class="list-group-item">Image TRW.1</a>
+                <a href="#" class="list-group-item">Image TRW.2</a>
+                <a href="#" class="list-group-item">Image TRW.3</a>
             </div>
 
             <a href="#item-3-2" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 3.2
+                <i class="glyphicon glyphicon-chevron-right"></i>Bottom Right Wing
             </a>
             <div class="list-group collapse" id="item-3-2">
-                <a href="#" class="list-group-item">Item 3.2.1</a>
-                <a href="#" class="list-group-item">Item 3.2.2</a>
-                <a href="#" class="list-group-item">Item 3.2.3</a>
-            </div>
-
-            <a href="#item-3-3" class="list-group-item" data-toggle="collapse">
-                <i class="glyphicon glyphicon-chevron-right"></i>Item 3.3
-            </a>
-            <div class="list-group collapse" id="item-3-3">
-                <a href="#" class="list-group-item">Item 3.3.1</a>
-                <a href="#" class="list-group-item">Item 3.3.2</a>
-                <a href="#" class="list-group-item">Item 3.3.3</a>
+                <a href="#" class="list-group-item">Image BRW.1</a>
+                <a href="#" class="list-group-item">Image BRW.2</a>
+                <a href="#" class="list-group-item">Image BRW.3</a>
             </div>
 
         </div>
